@@ -1,15 +1,5 @@
 import requests as rq
 from api import api_key
-import colors as cs
-
-def temp_color(temp):
-    if(temp > 0 and temp < 20):
-        return cs.green(temp)
-    elif(temp > 20):
-        return cs.yellow(temp)
-    elif(temp < 0):
-        return cs.blue(temp)
-        
 
 t = True
 while t == True:
@@ -33,7 +23,7 @@ while t == True:
             humidity = round(x['main']['humidity'])
             wind_speed = x['wind']['speed']
 
-            print('У місті ' + town + ' температура ' + str(temp_color(temperature)) + '°C' + cs.white(', відчувається як ') + str(temp_color(temp_feels)) + '°C' + cs.white(', ситуація у небі - ' + situation + ', швидкість вітру дорівнює ') + str(cs.purple(wind_speed)) + ' м/с' + cs.white(', вологість - ') + cs.purple(str(humidity) + '%') + cs.white('.'))
+            print('У місті ' + town + ' температура ' + str(temperature) + '°C' + ', відчувається як ' + str(temp_feels) + '°C' + ', ситуація у небі - ' + situation + ', швидкість вітру дорівнює ' + str(wind_speed) + ' м/с' + ', вологість - ' + str(humidity) + '%' + ('.'))
         else:
             print("Error", response.status_code)
     elif(f == 'ні' or f == 'Ні'):

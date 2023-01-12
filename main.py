@@ -7,7 +7,7 @@ while t == True:
     if(f == 'так' or f == 'Так'):
 
         town = str(input("У якому місті Ви зараз? >>> "))        
-        params={
+        params = {
         "q": town,
         "appid": api_key,
         "units": "metric",

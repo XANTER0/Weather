@@ -1,1 +1,1 @@
-api_key = "your api key from https://openweathermap.org/api"
+api_key = "4e2cbf878a8c9c959295659114d71184"
